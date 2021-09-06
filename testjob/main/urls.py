@@ -8,4 +8,5 @@ urlpatterns = [
     path('addpost', views.addpost, name='addpost'),
     path('delete/<post_id>', views.deletepost, name='delete'),
     path('edit/<int:pk>', EditPost.as_view(), name='edit'),
+    path('search', views.findTitle, name='search')
 ]

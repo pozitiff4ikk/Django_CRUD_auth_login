@@ -17,6 +17,7 @@
             <a class="me-3 py-2 text-dark text-decoration-none" href={% url 'home' %}>home</a>
             <a class="me-3 py-2 text-dark text-decoration-none" href={% url 'posts' %}>posts</a>
             <a class="me-3 py-2 text-dark text-decoration-none" href={% url 'addpost' %}>add post</a>
+            <a class="me-3 py-2 text-dark text-decoration-none"  href={% url 'search' %}>search</a>
             <a class="me-3 py-2 badge text-dark text-decoration-none"  href={% url 'logout' %}>LOGOUT</a>
     {% else %}
         <a class="me-1 py-2  badge text-dark text-decoration-none "  href={% url 'register' %}>REGISTRATION</a> |

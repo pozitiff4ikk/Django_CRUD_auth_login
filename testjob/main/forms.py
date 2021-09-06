@@ -16,3 +16,16 @@ class PostForm(ModelForm):
                 'placeholder': 'enter description'
             })
         }
+
+
+class PostFormSearch(ModelForm):
+    class Meta:
+        model = Post
+        fields = ["title"]
+        widgets = {
+            "title": TextInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'enter title to find'
+            }),
+        }
+

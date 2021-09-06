@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+find post by title
+{% endblock %}
+
+{% block content %}
+    <h1>just enter the post title to find the post</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{form.title}}<br>
+        <button type="submit" class="btn btn-success">find</button>
+    </form>
+{% endblock %}
+
