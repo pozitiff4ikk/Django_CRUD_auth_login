@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+post editing page
+{% endblock %}
+
+{% block content %}
+    <h1>post editing page</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{form.title}}<br>
+        {{form.description}}<br>
+        <button type="submit" class="btn btn-success">edit</button>
+
+    </form>
+{% endblock %}
+

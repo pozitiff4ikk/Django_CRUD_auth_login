@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+    <h1>posts</h1>
+    {% for p in posts %}
+        <div class="alert alert-warning mt-2">
+            <h3>{{ p.title }}</h3>
+            <p>{{ p.description }}</p>
+            <a class="me-3 py-2 text-dark text-decoration-none" href={% url 'edit' p.pk %}>Edit post</a>
+            <a class="me-3 py-2 text-dark text-decoration-none" href={% url 'delete' p.id %}>Delete post</a>
+        </div>
+    {% endfor %}
+{% endblock %}
